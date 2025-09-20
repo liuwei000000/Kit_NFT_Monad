@@ -1,0 +1,341 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+}
+
+.App h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.App p {
+  margin-bottom: 30px;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* 输入区 */
+.input {
+  width: 95%;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-family: inherit;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+
+/* 选择 */
+.select {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-family: inherit;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+}
+
+.select::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 连接钱包部分 */
+.connect-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.connect-button {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+}
+
+.connect-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(238, 90, 36, 0.6);
+}
+
+.connect-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.help-text {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* 应用内容区域 */
+.app-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.account-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.account-info p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* 计数器部分 */
+.counter-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+}
+
+.counter-display {
+  margin-bottom: 30px;
+}
+
+.counter-display h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.count-value {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin: 20px 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.action-button {
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.action-button.increment {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.action-button.increment:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+}
+
+.action-button.decrement {
+  background: linear-gradient(45deg, #f44336, #da190b);
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+.action-button.decrement:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.6);
+}
+
+.action-button.reset {
+  background: linear-gradient(45deg, #ff9800, #f57c00);
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+}
+
+.action-button.reset:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+}
+
+/* 合约信息 */
+.contract-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+}
+
+.contract-info p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.contract-address {
+  font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  word-break: break-all;
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+
+.explorer-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.explorer-link:hover {
+  color: #fff;
+}
+
+/* 未配置合约状态 */
+.no-contract {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.no-contract h3 {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.deploy-steps {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.deploy-steps h4 {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.deploy-steps ol {
+  padding-left: 20px;
+}
+
+.deploy-steps li {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* 页脚 */
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 15px;
+    font-size: calc(8px + 2vmin);
+  }
+  
+  .App h1 {
+    font-size: 2rem;
+  }
+  
+  .count-value {
+    font-size: 3rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-button {
+    width: 200px;
+  }
+  
+  .contract-address {
+    font-size: 0.7rem;
+  }
+}
+

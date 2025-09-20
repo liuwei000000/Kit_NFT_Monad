@@ -1,0 +1,11 @@
+node_modules/
+.env
+cache/
+artifacts/
+frontend/build/
+frontend/node_modules/
+*.log
+.DS_Store
+coverage/
+refs/
+tests/
